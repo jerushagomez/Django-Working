@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calculator App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1>Simple Calculator App</h1>
+        <p>Built Using Django and Python</p> 
+    </div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Django-Calculator</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#about">Home</a></li>
+            <li><a href="#add">Addition</a></li>
+            <li><a href="#sub">Subtraction</a></li>
+            <li><a href="#mul">Multiplication</a></li>
+            <li><a href="#div">Division</a></li>
+            <li><a href="https://www.python.org/">Python</a></li>
+            <li><a href="https://www.djangoproject.com/">Django</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10" style="margin:1rem 0 auto;" id="about">
+                <p class="lead">ABOUT</p>
+                <hr>
+                <p class="display-3">This is a basic calculator application created by using Django and Python API. <br>
+                Some basic guidelines:
+                    <ul>
+                        <li> Enter numerical digits only.</li>
+                        <li> Division by zero is not allowed.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <br>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10" style="margin:1rem 0 auto;" id="add">
+                <p class="lead">ADDITION</p>
+                <form action="add">
+                    Enter the first number: <input type="number" name="num1"><br>
+                    Enter the second number: <input type="number" name="num2"><br>
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10" style="margin:1rem 0 auto;" id="sub">
+                <p class="lead">SUBTRACTION</p>
+                <form action="sub">
+                    Enter the first number: <input type="number" name="num1"><br>
+                    Enter the second number: <input type="number" name="num2"><br>
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10" style="margin:1rem 0 auto;" id="mul">
+                <p class="lead">MULTIPLICATION</p>
+                <form action="mul">
+                    Enter the first number: <input type="number" name="num1"><br>
+                    Enter the second number: <input type="number" name="num2"><br>
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10" style="margin:1rem 0 auto;" id="div">
+                <p class="lead">DIVISION</p>
+                <hr>
+                <form action="div">
+                    Enter the first number:    <input type="number" name="num1"><br>
+                    Enter the second number: <input type="number" name="num2"><br>
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+{% endblock %}
